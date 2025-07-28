@@ -17,7 +17,7 @@ export default function Home() {
 
     setStatus('Enviando...');
 
-    const response = await fetch('https://mascena-api-test.vercel.app/api/contato', {
+    const response = await fetch('/api/contato', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -70,9 +70,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 px-6 max-w-5xl mx-auto" id="equipe">
+      <section className="py-20 px-6 max-w-6xl mx-auto" id="equipe">
         <h2 className="text-3xl font-bold mb-8 text-center">Nossa Equipe</h2>
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center text-sm md:text-base">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 text-center">
           <div><p className="font-semibold">Dr. Isaac Mascena</p><p>Direito Bancário e Previdenciário</p></div>
           <div><p className="font-semibold">Dr. Carlos Ayala</p><p>Direito Bancário</p></div>
           <div><p className="font-semibold">Dr. Luiz Augusto</p><p>Direito Marítimo</p></div>
@@ -81,8 +81,8 @@ export default function Home() {
           <div><p className="font-semibold">Dra. Débora Calheiros</p><p>Direito Civil</p></div>
           <div><p className="font-semibold">Dr. Filipe Lins</p><p>Direito Imobiliário</p></div>
           <div><p className="font-semibold">Dr. Cláudio Lôbo</p><p>Direito do Trabalho</p></div>
-          <div><p className="font-semibold">Renato Medeiros</p><p>Diretor de Relacionamento e Prospecção</p></div>
-          <div><p className="font-semibold">Gustavo Casado</p><p>Diretor de Negócios e Investimentos</p></div>
+          <div><p className="font-semibold">Renato Medeiros</p><p>Relacionamento e Prospecção</p></div>
+          <div><p className="font-semibold">Gustavo Casado</p><p>Negócios e Investimentos</p></div>
           <div><p className="font-semibold">Fábio Porto</p><p>Diretor Financeiro</p></div>
           <div><p className="font-semibold">Thyago Brito</p><p>Diretor Administrativo</p></div>
         </div>
@@ -100,7 +100,6 @@ export default function Home() {
             </button>
             {status && <p className="mt-4 text-sm">{status}</p>}
           </form>
-          <a href="https://wa.me/5581999245994" target="_blank" className="mt-6 inline-block text-sm underline hover:text-gray-300">Fale conosco pelo WhatsApp</a>
         </div>
       </section>
     </main>
