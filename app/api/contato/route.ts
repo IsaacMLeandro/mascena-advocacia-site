@@ -1,4 +1,3 @@
-
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
@@ -14,11 +13,11 @@ export async function POST(request: Request) {
       from: 'onboarding@resend.dev',
       to: 'contato@mascenaadvocacia.com.br',
       subject: 'Novo contato pelo site',
-      html: \`
+      html: `
         <strong>Nome:</strong> \${nome}<br/>
         <strong>Email:</strong> \${email}<br/>
         <strong>Mensagem:</strong><br/>\${mensagem.replace(/\n/g, '<br/>')}
-      \`,
+      `,
     });
 
     return NextResponse.json({ success: true, response });
