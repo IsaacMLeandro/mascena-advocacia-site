@@ -16,7 +16,7 @@ export async function POST(request: Request) {
       html: `
         <strong>Nome:</strong> ${nome}<br/>
         <strong>Email:</strong> ${email}<br/>
-        <strong>Mensagem:</strong><br/>${mensagem.replace(/\n/g, '<br/>')}
+        <strong>Mensagem:</strong><br/>${mensagem.replace(/\n/g, '<br/>' )}
       `,
     });
 
